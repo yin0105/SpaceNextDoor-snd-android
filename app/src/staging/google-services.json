@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "536686033349",
+    "project_id": "snd-app-c7296",
+    "storage_bucket": "snd-app-c7296.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536686033349:android:1bd284cc33d335975733ac",
+        "android_client_info": {
+          "package_name": "com.spacenextdoor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536686033349-nk05an36uhm1m144fidnjl1f8v1hqu41.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWSok10ucVYysVYpTpwjrZCZqRsrGqm1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536686033349-nk05an36uhm1m144fidnjl1f8v1hqu41.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "536686033349-d3cgfutep053dp23h7ebtv67l70e7rrb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.spacenextdoor.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536686033349:android:d6de8f20a453a3da5733ac",
+        "android_client_info": {
+          "package_name": "com.spacenextdoor.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536686033349-nk05an36uhm1m144fidnjl1f8v1hqu41.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWSok10ucVYysVYpTpwjrZCZqRsrGqm1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536686033349-nk05an36uhm1m144fidnjl1f8v1hqu41.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "536686033349-d3cgfutep053dp23h7ebtv67l70e7rrb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.spacenextdoor.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536686033349:android:d5bf865f130835285733ac",
+        "android_client_info": {
+          "package_name": "com.spacenextdoor.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536686033349-nk05an36uhm1m144fidnjl1f8v1hqu41.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWSok10ucVYysVYpTpwjrZCZqRsrGqm1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536686033349-nk05an36uhm1m144fidnjl1f8v1hqu41.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "536686033349-d3cgfutep053dp23h7ebtv67l70e7rrb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.spacenextdoor.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

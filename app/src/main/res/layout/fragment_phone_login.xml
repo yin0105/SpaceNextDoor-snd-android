@@ -1,0 +1,457 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.PhoneLoginFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llLoginPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="22dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textview_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:letterSpacing="0.05"
+                android:text="@string/phone_login"
+                android:textColor="@color/color_gray"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/ccp_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_round"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccpCounteryPicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="14sp"
+                        app:ccpDialog_textColor="@color/country_color"
+                        app:ccp_clickable="true"
+                        app:ccp_defaultNameCode="SG"
+                        app:ccp_showArrow="false"
+                        app:ccp_showFlag="false"
+                        app:ccp_showFullName="true"
+                        app:ccp_showNameCode="false"
+                        app:ccp_textGravity="LEFT"
+                        app:ccp_textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/ccp_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_arrow_down_phone" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_round">
+
+                <EditText
+                    android:id="@+id/etCcp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@android:color/transparent"
+                    android:focusable="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/ccp"
+                    android:padding="10dp"
+                    android:textColor="@color/color_gray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etPhoneEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@id/etCcp"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="12dp"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:textColor="@color/color_gray"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/etPhoneEdit"
+                    android:layout_alignBottom="@+id/etPhoneEdit"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@id/etCcp"
+                    android:background="@color/txtview_round_color" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvPhoneError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/red_btn_bg_color"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1">
+
+                    <CheckBox
+                        android:id="@+id/chkRemember"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/checkbox"
+                        android:button="@null"
+                        android:checked="false" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/checkBoxPrivacy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="0.8dp"
+                    android:layout_weight="0.9"
+                    android:buttonTint="@color/primary_color"
+                    android:fontFamily="@font/poppins_regular"
+                    android:letterSpacing="0.04"
+                    android:text="@string/login_policy"
+                    android:textColor="@color/color_gray"
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnLoginPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_round"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="@string/login_btn_text"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="20dp"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:gravity="center_vertical"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:weightSum="1">-->
+
+            <!--                <View-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="0.05dp"-->
+            <!--                    android:layout_weight="0.35"-->
+            <!--                    android:background="@drawable/view_boader" />-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="0.35"-->
+            <!--                    android:fontFamily="@font/poppins_regular"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="@string/or_continue_with"-->
+            <!--                    android:textColor="@color/country_color"-->
+            <!--                    android:textSize="12sp" />-->
+
+            <!--                <View-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="0.05dp"-->
+            <!--                    android:layout_weight="0.35"-->
+            <!--                    android:background="@drawable/view_boader" />-->
+
+
+            <!--            </LinearLayout>-->
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:weightSum="2">-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:id="@+id/llLoginGoogle"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="45dp"-->
+            <!--                    android:layout_marginLeft="8dp"-->
+            <!--                    android:layout_marginRight="8dp"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:background="@drawable/btn_social_google"-->
+            <!--                    android:gravity="center">-->
+
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="22dp"-->
+            <!--                        android:layout_height="22dp"-->
+            <!--                        android:layout_marginRight="10dp"-->
+            <!--                        android:src="@drawable/ic_google" />-->
+
+            <!--                    <TextView-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:layout_marginLeft="10dp"-->
+            <!--                        android:fontFamily="@font/poppins_bold"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:text="@string/google"-->
+            <!--                        android:textColor="@color/black" />-->
+            <!--                </LinearLayout>-->
+
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="45dp"-->
+            <!--                    android:layout_marginLeft="8dp"-->
+            <!--                    android:layout_marginRight="8dp"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:background="@drawable/btn_social_google"-->
+            <!--                    android:gravity="center">-->
+
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="23dp"-->
+            <!--                        android:layout_height="23dp"-->
+            <!--                        android:layout_marginLeft="20dp"-->
+            <!--                        android:src="@drawable/ic_facebook" />-->
+
+            <!--                    <TextView-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:fontFamily="@font/poppins_bold"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:text="@string/facebook"-->
+            <!--                        android:textColor="@color/black" />-->
+            <!--                </LinearLayout>-->
+
+            <!--            </LinearLayout>-->
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llVerifyPhone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="22dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/etPhoneVerify"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/textview_round"
+                    android:backgroundTint="@color/txtview_round_color"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/phone_num"
+                    android:inputType="phone"
+                    android:letterSpacing="0.2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvEditPhoneView"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/label_edit"
+                    android:textColor="@color/primary_color"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/phone_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/Add_Pin_Code"
+                android:textColor="@color/color_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/pin_detail_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:letterSpacing="0.07"
+                android:text="@string/phone_message_otp"
+                android:textColor="@color/country_color"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.mukesh.OtpView
+                    android:id="@+id/otp_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:focusableInTouchMode="true"
+                    android:inputType="number"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:hideLineWhenFilled="false"
+                    app:itemCount="6"
+                    app:itemSpacing="5dp"
+                    app:itemWidth="50dp"
+                    app:lineColor="@color/primary_color"
+                    app:state_filled="true"
+                    app:viewType="line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvOtpPhoneError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/red_btn_bg_color"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/Text"
+                    android:textColor="@color/country_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/label_please"
+                    android:textColor="@color/country_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvSendOtpPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toEndOf="@id/text1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:linksClickable="true"
+                    android:text="@string/Send_text"
+                    android:textColor="@color/primary_color"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnVerifyPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="0.25"
+                android:background="@drawable/btn_round"
+                android:enabled="false"
+                android:text="@string/verify_btnn"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:backgroundTint="@color/primary_color" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLoader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/imWaveFormation"
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_centerHorizontal="true"
+                android:foregroundGravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

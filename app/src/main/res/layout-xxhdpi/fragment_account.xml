@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/homeScrollColor"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:id="@+id/loaderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/mainFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="60dp"
+                android:visibility="visible">
+
+                <include
+                    android:id="@+id/bar"
+                    layout="@layout/toolbar_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bar"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/account"
+                        android:textColor="@color/color_gray"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/personal_detail"
+                        android:textColor="@color/color_gray"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/full_name"
+                        android:textColor="@color/color_gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/account_background_round"
+                        android:focusable="false"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="15dp"
+                        android:textColor="@color/color_gray"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:layout_weight="1"
+                        android:alpha="0.5"
+                        android:background="@color/txtview_round_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/login_detail"
+                        android:textColor="@color/color_gray"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/email_address"
+                        android:textColor="@color/color_gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvEmailAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/account_background_round"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="15dp"
+                        android:textColor="@color/color_gray"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/phone_number"
+                        android:textColor="@color/color_gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/phone_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/account_background_round"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="15dp"
+                        android:textColor="@color/color_gray"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="34dp"
+                        android:layout_weight="1"
+                        android:alpha="0.5"
+                        android:background="@color/txtview_round_color" />
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="13dp"-->
+<!--                        android:fontFamily="@font/poppins_semibold"-->
+<!--                        android:text="@string/social_account"-->
+<!--                        android:textColor="@color/color_gray"-->
+<!--                        android:textSize="18sp" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="12dp"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="2">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:fontFamily="@font/poppins_regular"-->
+<!--                                android:text="@string/facebook"-->
+<!--                                android:textColor="@color/color_gray"-->
+<!--                                android:textSize="14sp" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:fontFamily="@font/poppins_regular"-->
+<!--                                android:text="@string/connect"-->
+<!--                                android:textAlignment="textEnd"-->
+<!--                                android:textColor="@color/primary_color"-->
+<!--                                android:textSize="12sp" />-->
+<!--                            &lt;!&ndash;                    <TextView&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        android:layout_marginTop="5dp"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        android:layout_weight="1"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        android:fontFamily="@font/poppins_regular"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        android:text="@string/disconnect"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        android:textAlignment="textEnd"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        android:textColor="@color/error_color"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        android:textSize="12sp" />&ndash;&gt;-->
+<!--                        </LinearLayout>-->
+
+<!--                        &lt;!&ndash;                <RelativeLayout&ndash;&gt;-->
+<!--                        &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                    android:layout_marginTop="8dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                    android:orientation="horizontal">&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                    <TextView&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:id="@+id/fb_connect"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_marginEnd="5dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:fontFamily="@font/poppins_regular"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:text="SriarpaMay"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:textColor="@color/color_gray"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:textSize="12sp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:visibility="visible" />&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                    <TextView&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_toEndOf="@id/fb_connect"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:fontFamily="@font/poppins_regular"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:text="@string/connected"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:textAlignment="textStart"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:textColor="@color/textcolorgray"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:textSize="12sp" />&ndash;&gt;-->
+<!--                        &lt;!&ndash;                </RelativeLayout>&ndash;&gt;-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="7dp"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/name_connected"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginEnd="5dp"-->
+<!--                                android:fontFamily="@font/poppins_regular"-->
+<!--                                android:textColor="@color/color_gray"-->
+<!--                                android:textSize="12sp"-->
+<!--                                android:visibility="gone" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_toEndOf="@id/name_connected"-->
+<!--                                android:fontFamily="@font/poppins_regular"-->
+<!--                                android:text="@string/not_connected"-->
+<!--                                android:textAlignment="textStart"-->
+<!--                                android:textColor="@color/textcolorgray"-->
+<!--                                android:textSize="12sp" />-->
+<!--                        </RelativeLayout>-->
+
+<!--                        <View-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="1dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="28dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:alpha="0.5"-->
+<!--                            android:background="@color/txtview_round_color" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="25dp"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="2">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:fontFamily="@font/poppins_regular"-->
+<!--                                android:text="@string/google"-->
+<!--                                android:textColor="@color/color_gray"-->
+<!--                                android:textSize="14sp" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:fontFamily="@font/poppins_regular"-->
+<!--                                android:text="@string/connect"-->
+<!--                                android:textAlignment="textEnd"-->
+<!--                                android:textColor="@color/primary_color"-->
+<!--                                android:textSize="12sp" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="7dp"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/name_connect"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginEnd="5dp"-->
+<!--                                android:fontFamily="@font/poppins_regular"-->
+<!--                                android:textColor="@color/color_gray"-->
+<!--                                android:textSize="12sp"-->
+<!--                                android:visibility="gone" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_toEndOf="@id/name_connect"-->
+<!--                                android:fontFamily="@font/poppins_regular"-->
+<!--                                android:text="@string/not_connected"-->
+<!--                                android:textAlignment="textStart"-->
+<!--                                android:textColor="@color/textcolorgray"-->
+<!--                                android:textSize="12sp" />-->
+<!--                        </RelativeLayout>-->
+<!--                    </LinearLayout>-->
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginTop="28dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:alpha="0.5"-->
+<!--                        android:background="@color/txtview_round_color" />-->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/payment_method"
+                        android:textColor="@color/color_gray"
+                        android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/background_tint_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="27dp"
+                        android:background="@drawable/account_background_round">
+
+                        <RelativeLayout
+                            android:id="@+id/rlCardShow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/mastercard"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignTop="@id/tvPaymentMethod"
+                                android:layout_alignBottom="@id/tvPaymentMethod"
+                                android:layout_alignParentStart="true"
+                                android:src="@drawable/ic_mastercard" />
+
+                            <TextView
+                                android:id="@+id/tvPaymentMethod"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_toRightOf="@id/mastercard"
+                                android:drawablePadding="12dp"
+                                android:focusable="false"
+                                android:fontFamily="@font/poppins_regular"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:text="0123"
+                                android:textColor="@color/color_gray"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/edit_Payment_btn"
+                                android:layout_width="50dp"
+                                android:layout_height="60dp"
+                                android:layout_alignTop="@id/tvPaymentMethod"
+                                android:layout_alignBottom="@id/tvPaymentMethod"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="5dp"
+                                android:ems="10"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:text="Edit"
+                                android:textColor="@color/primary_color" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llCardHide"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+
+                            <com.stripe.android.view.CardInputWidget
+                                android:id="@+id/compactCreditCardInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/account_background_round"
+                                android:focusable="false"
+                                android:focusedByDefault="false"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="0.6"
+                            android:gravity="center_vertical">
+
+
+                            <LinearLayout
+                                android:id="@+id/layout_save"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/btn_save"
+                                    android:layout_width="0dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0.4"
+                                    android:background="@drawable/btn_round"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:gravity="center"
+                                    android:text="@string/save"
+                                    android:textColor="@color/white"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/btn_cancel"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0.6"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="@string/cancel"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/textcolorgray"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+
+                            <View
+                                android:id="@+id/view1"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:alpha="0.5"
+                                android:background="@color/txtview_round_color"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.4"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="11dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_shape" />
+
+                            <TextView
+                                android:id="@+id/singOutApplication"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/sign_out"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/color_gray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/rlLoader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/imWaveFormation"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:foregroundGravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/loader"
+            app:lottie_loop="true" />
+
+    </RelativeLayout>
+
+</FrameLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

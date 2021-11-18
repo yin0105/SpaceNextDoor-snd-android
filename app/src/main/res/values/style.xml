@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CardViewRadius">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">18dp</item>
+        <item name="android:shadowColor">@color/txtview_round_color</item>
+        <item name="borderWidth">2dp</item>
+    </style>
+
+    <style name="CardViewColor">
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="cardCornerRadius">18dp</item>
+    </style>
+
+    <style name="CustomTextAppearance" parent="TextAppearance.MaterialCalendarWidget.Header">
+        <item name="android:textColor">@color/unit_headings</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="CardViewRadiusUnit">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">22dp</item>
+        <item name="android:shadowColor">@color/txtview_round_color</item>
+        <item name="borderWidth">1dp</item>
+    </style>
+
+</resources>

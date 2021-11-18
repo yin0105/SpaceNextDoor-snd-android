@@ -1,0 +1,39 @@
+mutation requestTermination($payload: TerminationPayload! ){
+    requestTermination(payload: $payload){
+        id
+        move_out_date
+        termination_date
+        failed_renewals_amount
+        remaining_days_amount
+        notice_period_amount
+        promotion_amount
+        discount
+        total_amount
+        currency
+        is_overdue
+        created_at
+        updated_at
+        status
+        payment_status
+    }
+}
+
+mutation payTermination($payload : PayTerminationPayload!){
+    payTerminationAmount(payload: $payload){
+        success
+    }
+}
+
+mutation calculateTerminationDues($payload: TerminationPayload!) {
+    calculateTerminationDues(payload: $payload) {
+        move_out_date
+        currency_sign
+        currency
+        termination_date
+        failed_renewals_amount
+        remaining_days_amount
+        notice_period_amount
+        promotion_amount
+        total_amount
+    }
+}

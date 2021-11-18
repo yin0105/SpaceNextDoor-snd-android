@@ -1,0 +1,194 @@
+<resources>
+    <!--    <string name="app_name1">SND</string>-->
+    <string name="welcome">Welcome!</string>
+    <string name="email_login">Please add your email and \nwe will send you an email to verify it.</string>
+    <string name="phone_login">Please add your phone number and we will send you a SMS to verify it.</string>
+    <string name="login_policy">By signing in, I agree to Terms of use and Privacy Policy.</string>
+    <string name="login_btn_text">LOGIN</string>
+    <string name="Add_Pin_Code">Add your PIN code</string>
+    <string name="message_otp">We have just sent you a PIN code to your email %1$s. It can take up to a minute.</string>
+    <string name="phone_message_otp">We have just sent you a PIN code to your phone number %1$s. It can take up to a minute.</string>
+    <string name="Text">Did\'nt you receive the message?</string>
+    <string name="Send_text">send it again.</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="email"> sriarpa.jan@gmail.com.</string>
+    <string name="phone_num"> +65 12345678</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="verify_btnn">VERIFY</string>
+    <string name="or_continue_with">Or continue with</string>
+    <string name="ccp">+65</string>
+    <string name="btngetStarted">Get Started</string>
+    <string name="bottom_nav_title_home">Home</string>
+    <string name="bottom_nav_title_payment">Payment</string>
+    <string name="bottom_nav_title_pickup">Pick-up</string>
+    <string name="bottom_nav_title_inventory">Inventory</string>
+    <string name="bottom_nav_title_account">Account</string>
+    <string name="home_more_detail">More details</string>
+    <string name="latest_teansaction">Latest transactions</string>
+    <string name="space">Do you have extra space? Become a host</string>
+    <string name="description">Earn additional income from empty spaces. We\'r there to help along the way</string>
+    <string name="list_space">LIST YOUR SPACE</string>
+    <string name="explore_storage">EXPLORE STORAGE</string>
+    <string name="search_text">Search unit no.</string>
+    <string name="toolbar_units">Unit</string>
+    <string name="add_service">+ Add new Service </string>
+    <string name="dialog_heading">Do you confirm request termination? </string>
+    <string name="heading_pickup_empty_state">You don\'t have any services now</string>
+    <string name="text_pickup_empty_state">We would like to help you moving to your storage, Please check our services</string>
+    <string name="pickup_service">Yes, I need Pickup service </string>
+    <string name="pickup_description">We\'ll load your items onto our truck, drive them to your space, and move them in.</string>
+    <string name="starting">Starting at</string>
+    <string name="btn_convinient">MOST CONVENIENT</string>
+    <string name="packing_service">Yes, need Pickup and packing service</string>
+    <string name="packing_description">We\'ll pack your items and drive them to your space and move them in.</string>
+    <string name="myself">No,I will do it myself</string>
+    <string name="myself_description">Drop off your items at your Storage facility</string>
+    <string name="storage_location">View storage location</string>
+    <string name="pickup">Pickup service</string>
+    <string name="collection_detail">Your Collection Detail</string>
+    <string name="address">Enter your address</string>
+    <string name="pickup_time">PICK-UP TIME</string>
+    <string name="packing_supply">Unlimited packing supplies</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="service">Select service</string>
+    <string name="payment">Payment</string>
+    <string name="account">Account</string>
+    <string name="personal_detail">Personal details</string>
+    <string name="full_name">Full name</string>
+    <string name="login_detail">Login details</string>
+    <string name="email_address">E-mail address</string>
+    <string name="phone_number">Phone number</string>
+    <string name="social_account">Social accounts</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="connected">Connected</string>
+    <string name="connect">Connect</string>
+    <string name="not_connected">Not Connected</string>
+    <string name="payment_method">Payment method</string>
+    <string name="delete_account">Delete account</string>
+    <string name="save">SAVE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="change_new_date">Change New Date</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="reuest_dialog_heading">Your selected date is not include in the condition of termination</string>
+    <string name="reuest_dialog_des">Please change another date or contact our team</string>
+    <string name="sign_out">Sign out</string>
+
+    <string-array name="months">
+        <item>This week</item>
+        <item>Last 3 weeks</item>
+        <item>Previous month</item>
+        <item>Calendar</item>
+    </string-array>
+
+    <string-array name="Inventoryhome">
+        <item>Home(0)</item>
+        <item>Home(30)</item>
+        <item>Home(2)</item>
+        <item>Home(3)</item>
+    </string-array>
+
+
+    <string name="move_in">MOVE IN</string>
+    <string name="move_out">MOVE OUT</string>
+    <string name="label_unit">Booking</string>
+    <string name="label_monthly_ongoing">Monthly Ongoing</string>
+
+    <string name="label_one">Manage your items \n anytime</string>
+    <string name="label_two">Schedule your \n preferred time</string>
+    <string name="label_three">We will help you \n pick and pack them up</string>
+    <string name="label_four">Earn more money \n from your space</string>
+    <string name="label_five">Access your unit and manage your bookings anytime and anywhere you want.</string>
+    <string name="label_six">Select your preferred date and time to \n deliver your stuff door to door.</string>
+    <string name="label_seven">Our professional team will help you to \n make a convenient for moving.</string>
+    <string name="label_eight">Oue team support 24/7 available to \n make service always active</string>
+
+    //Failed to connect with the SpaceNextDoor server.
+    <string name="alert">Alert</string>
+
+    <string name="no_Internet">Please check your internet connection and try again.</string>
+
+    <string name="logout_App">Are you sure you want to logout?</string>
+
+    <string name="enter_email">Please enter your email</string>
+    <string name="enter_phone_number">Please enter your phone number</string>
+    <string name="invalid_email">Please enter your email correctly</string>
+    <string name="select_country">Please select the country code</string>
+    <string name="label_hello">Hello,</string>
+    <string name="label_User">User</string>
+
+    <string name="request_access_code">Do you confirm request access code.</string>
+    <string name="request_access_code_generate">We will generate the access code and contact you back soon.</string>
+    <string name="ok">OK</string>
+    <string name="inventory">Inventory</string>
+    <string name="no_result_found">Results not found</string>
+
+    <string name="empty_transaction">No Transaction!</string>
+    <string name="no_item_transaction">You have\'nt added any transactions yet.</string>
+
+    <string name="no_item">No item yet!</string>
+    <string name="no_item_text">You have\'nt added any items here.</string>
+    <string name="no_unit">You don\'t have unit yet!</string>
+    <string name="no_unit_text">Getting more space in your life and start booking the unit.</string>
+    <string name="no_transaction">You have no current transaction</string>
+    <string name="label_edit">Edit</string>
+    <string name="label_please">please</string>
+    <string name="request_Access_Code">REQUEST ACCESS CODE</string>
+    <string name="request_termination">REQUEST TERMINATION</string>
+    <string name="validationErrors">Validation Errors</string>
+    <string name="publishable_key_Test">pk_test_51IbfM8EiQ5FPSfJBGGlYuoiF1TL7Ou978fdIj7FdWotAi00H3m7CJH2bmjO45tgeUqEcnFW6Fu6zirX4GyLdlm6W00QVS5uBDm</string>
+    <string name="publish_key_snd_test">pk_test_PhXcdrxoO6hhqFTfY2rIg3id</string>
+    <string name="today">Today</string>
+    <string name="transactions">Transactions</string>
+    <string name="iotService">IOT Service!</string>
+    <string name="iotServiceDescription">IOT service is coming soon. Please let us know if you\'re interested</string>
+    <string name="btnInterested">I\'M INTERESTED</string>
+    <string name="calendarDescription">Please choose move out date at least 14 days since requested to continue termination request.</string>
+    <string name="requestTerminationDate">Request Termination date</string>
+    <string name="notice_period">Notice period</string>
+    <string name="contract_terminating_date">Contract Terminating date</string>
+    <string name="move_out_small">Move out</string>
+    <string name="change_date"><u> Change date</u></string>
+    <string name="payment_summary">Payment Summary</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="promotion_condition_fee">Promotion condition fee</string>
+    <string name="promotion_detail">(Your promotion would\'nt be applied on this terminating date)</string>
+    <string name="total">Total refund</string>
+    <string name="btn_confirm_and_pay">CONFIRM AND PAY</string>
+    <string name="termination_Date">Termination Date</string>
+    <string name="termination_requested">Termination Is Already Requested</string>
+    <string name="cancel_booking">CANCEL BOOKING</string>
+    <string name="sub_total">Subtotal</string>
+    <string name="deposit_fee">Deposit</string>
+    <string name="Completed">Completed</string>
+    <string name="requested_termination">REQUESTED TERMINATION</string>
+    <string name="logout">Log Out</string>
+    <string name="logout_description">Do you want to log out?</string>
+    <string name="cancel_booking_text">Your booking is canceled!</string>
+    <string name="confirm_email_cancel_booking">We will send you an email confirming your cancellation</string>
+    <string name="booking_text">Your booking was successfully cancelled,</string>
+    <string name="booking_text_light">you don’t need to do anything else.</string>
+    <string name="cancellation_details">Cancellation details</string>
+    <string name="full_refund">Full refund</string>
+    <string name="find_other_storage">FIND ANOTHER STORAGES</string>
+    <string name="back_home">BACK TO HOME</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="why_cancel">Why do you need to cancel?</string>
+    <string name="select_reason">Please select a reason</string>
+    <string name="host_reason">Tell host why you need to cancel</string>
+    <string name="continue_cancel_booking">CONTINUE</string>
+    <string name="Penalty_Applied">Penalty fee</string>
+    <string name="refunded_Amount">Refunded Amount</string>
+    <string name="penalty_percent">Penalty Percent</string>
+    <string name="cancel_booking_confirmation">Are you sure you want to cancel your booking?</string>
+    <string name="undone">This action cannot be undone.</string>
+    <string name="keep_booking">YES, CANCEL</string>
+    <string name="keep_bookings">KEEP, BOOKING</string>
+    <string name="invoice">see invoice</string>
+    <string name="message_Host">Message to host....</string>
+    <string name="cancel_insurance">Insurance</string>
+    <string name="production">SND</string>
+    <string name="dev">SND-Dev</string>
+    <string name="staging">SND-Stag</string>
+
+</resources>

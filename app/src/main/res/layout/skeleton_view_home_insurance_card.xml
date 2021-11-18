@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp">
+
+
+    <LinearLayout
+        android:id="@+id/layoutMiddleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/skeleton_background_white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical">
+                <View
+
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/circle_view" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lla"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <View
+                        android:id="@+id/tv_titleb"
+                        android:layout_width="0dp"
+                        android:layout_height="12dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/access_skeleton_bg" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <View
+                        android:id="@+id/tv_titlebbc"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1.3"
+                        android:background="@drawable/skeleton_color_background" />
+
+                    <View
+                        android:id="@+id/tv_titlebbee"
+                        android:layout_width="0dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/access_skeleton_bg" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <View
+                        android:id="@+id/tv_titlebbb"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1.25"
+                        android:background="@drawable/skeleton_color_background" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/skeleton_background_white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical">
+                <View
+
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/circle_view" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lla1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <View
+                        android:id="@+id/tv_titleb1"
+                        android:layout_width="0dp"
+                        android:layout_height="12dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/access_skeleton_bg" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <View
+                        android:id="@+id/tv_titlebbc1"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1.3"
+                        android:background="@drawable/skeleton_color_background" />
+
+                    <View
+                        android:id="@+id/tv_titlebbee1"
+                        android:layout_width="0dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/access_skeleton_bg" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <View
+                        android:id="@+id/tv_titlebbb1"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1.25"
+                        android:background="@drawable/skeleton_color_background" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/layoutMiddleBar"
+        android:layout_width="match_parent"
+        android:background="@drawable/skeleton_view_round"
+        android:layout_marginTop="20dp"
+        android:layout_height="350dp">
+    </LinearLayout>
+
+
+</RelativeLayout>

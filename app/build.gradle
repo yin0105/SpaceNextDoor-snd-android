@@ -1,0 +1,262 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'com.google.gms.google-services'
+    id 'com.jakewharton.butterknife'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'com.apollographql.apollo'
+    id 'com.google.secrets_gradle_plugin' version '0.5'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.spacenextdoor"
+        minSdkVersion 21
+        targetSdkVersion 30
+        multiDexEnabled true
+        testInstrumentationRunner
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    def BASE_URL = "BASE_URL"
+
+    flavorDimensions "dev"
+    productFlavors {
+        staging {
+            dimension "dev"
+            applicationId "com.spacenextdoor.staging"
+            buildConfigField "String", "BASE_URL", '"https://api-stag.spacenextdoor.com/graphql"'
+            resValue "string", "app_name", "SND-Stag"
+            versionCode 1
+            versionName "1.0"
+        }
+        development {
+            dimension "dev"
+            applicationId "com.spacenextdoor.dev"
+            buildConfigField "String", "BASE_URL", '"https://api-dev.spacenextdoor.com/graphql"'
+            resValue "string", "app_name", "SND-Dev"
+            versionCode 1
+            versionName "1.0"
+        }
+        production {
+
+            dimension "dev"
+            applicationId "com.spacenextdoor"
+            buildConfigField "String", "BASE_URL", '"https://api.spacenextdoor.com/graphql"'
+            resValue "string", "app_name", "SND"
+            versionCode 1
+            versionName "1.0"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/library_release.kotlin_module'
+    }
+
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
+
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'androidx.lifecycle:lifecycle-process:2.3.1'
+
+    // Required -- JUnit 4 framework
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    testImplementation "com.google.truth:truth:1.0.1"
+    androidTestImplementation "com.google.truth:truth:1.0.1"
+
+//    implementation "com.android.support:design:28.0.0"
+
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.2.0'
+    implementation 'io.coil-kt:coil:0.11.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0-rc01'
+    implementation 'androidx.paging:paging-runtime-ktx:2.1.2'
+    implementation 'androidx.core:core-ktx:1.3.0'
+
+    annotationProcessor 'android.arch.core:common:1.1.1'
+    annotationProcessor 'android.arch.lifecycle:compiler:1.1.1'
+    //indicator
+    implementation "com.tbuonomo.andrui:viewpagerdotsindicator:${versions.indicator}"
+
+    //CountryCode
+    implementation "com.hbb20:ccp:${versions.countryCode}"
+
+    //Recyclerview
+    implementation "androidx.recyclerview:recyclerview:${versions.recyclerView}"
+
+    //CardView
+    implementation "androidx.cardview:cardview:${versions.cardView}"
+
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxandroid:${versions.rxJava}"
+    implementation "io.reactivex.rxjava2:rxjava:${versions.rxJavax}"
+
+    // RxJava with RetroFit
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${versions.retroFit}"
+
+    // Retrofit & OkHttp
+    implementation "com.squareup.retrofit2:retrofit:${versions.retrofits}"
+/*    implementation "com.squareup.okhttp3:logging-interceptor:${versions.interceptor}"
+    implementation "com.squareup.okhttp3:okhttp:${versions.interceptor}"*/
+
+//    implementation 'com.helpcrunch:chat-sdk:3.0.6'
+
+    //Json
+    implementation "com.squareup.retrofit2:converter-gson:${versions.okHttp}"
+
+    //Design
+    implementation "com.android.support:design:${versions.design}"
+
+    //Floating Button
+    implementation "com.github.clans:fab:${versions.fab}"
+
+    //Firebase
+    implementation "com.google.firebase:firebase-auth:${versions.firebase}"
+
+    implementation "com.android.support:multidex:${versions.multidex}"
+
+    implementation "com.github.salehyarahmadi:AndExAlertDialog:${versions.andExAlertDialog}"
+
+    implementation "com.github.shagiz:AlmostMaterialDatepicker:${versions.almostMaterialDatepicker}"
+
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+
+    implementation 'com.mikhaellopez:circularimageview:4.1.1'
+
+    implementation 'com.jakewharton:butterknife:10.2.3'
+
+    kapt 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    implementation 'com.wdullaer:materialdatetimepicker:1.3.0'
+
+    /// GraphQL
+    implementation 'com.apollographql.apollo:apollo-runtime:2.5.5'
+    implementation 'com.apollographql.apollo:apollo-coroutines-support:2.5.5'
+
+
+    // Google Map
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
+    // Indicator for pagerView2
+    implementation 'me.relex:circleindicator:2.1.4'
+
+    // Indicator for CardView
+    implementation 'com.ryanjeffreybrooks:indefinitepagerindicator:1.0.10'
+
+    // CompactCreditInput
+    implementation "com.github.10bis:compactCreditInput:2.0.3"
+
+    // Stripe SDK
+    implementation 'com.stripe:stripe-android:6.1.2'
+    implementation 'com.stripe:stripe-android:15.0.1'
+
+
+    // Skeleton View
+    implementation 'com.ethanhua:skeleton:1.1.2'
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
+
+    // Image Loading (i.e. profile picture loading!)
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    implementation 'com.github.corouteam:GlideToVectorYou:v2.0.0'
+
+    // Custom Calendar
+    implementation 'com.github.prolificinteractive:material-calendarview:1.6.0'
+
+    //Loader Animation
+    implementation "com.airbnb.android:lottie:3.0.7"
+
+    //Firebase
+//    implementation 'com.google.firebase:firebase-messaging:21.1.0'
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.0'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-messaging:21.1.0'
+
+    //HelpCrunch
+    implementation('com.helpcrunch:chat-sdk:3.0.8')
+
+// apply plugin: 'com.google.gms.google-services'
+    implementation("com.squareup.okhttp3:okhttp") {
+        version {
+            strictly '3.12.12'
+        }
+    }
+    implementation("com.squareup.okhttp3:logging-interceptor") {
+        version {
+            strictly '3.12.12'
+        }
+    }
+
+    //Widgets
+    implementation 'com.github.TalbotGooday:AvatarView:0.0.2'
+
+    // bOTTOM NAVIGATION
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+
+    implementation 'com.thefinestartist:finestwebview:1.2.7'
+
+    // Fancy Toast
+    implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.8'
+
+    // Motion Toast Library
+    implementation 'com.github.Spikeysanju:MotionToast:1.3.3.4'
+
+
+
+}
+
+// apply plugin: 'com.google.gms.google-services'
+
+apollo {
+    // instruct the compiler to generate Kotlin models
+    generateKotlinModels.set(true)
+}

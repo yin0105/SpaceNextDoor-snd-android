@@ -1,0 +1,73 @@
+query fetchTransactions($limit: Int!){
+    transactions(pagination: {limit:$limit, skip:0}) {
+        edges {
+            id
+            created_at
+            currency
+            type
+            renewal {
+                deposit_amount
+                sub_total_amount
+                discount_amount
+                insurance_amount
+            }
+            booking {
+                id
+                short_id
+                space_size
+                space_width
+                space_height
+                space_length
+                space_size_unit
+                total_amount
+                status
+                currency
+                created_at
+                currency_sign
+                termination{
+                    status
+                    payment_status
+                }
+                space_features {
+                    name_en
+                }
+                original_space {
+                    size_unit
+                    space_type {
+                        name_en
+                    }
+                }
+                site_address {
+                    lat
+                    lng
+                    postal_code
+                    flat
+                    street
+                    country {
+                        name_en
+                    }
+                    city {
+                        name_en
+                    }
+                    district{
+                        name_en
+                    }
+                }
+            }
+            order_pick_up_service {
+                id
+                amount
+                discount_amount
+                total_amount
+            }
+            insurance {
+                id
+                name_en
+                total_amount
+                third_party_provider
+                created_at
+                price_per_day
+            }
+        }
+    }
+}

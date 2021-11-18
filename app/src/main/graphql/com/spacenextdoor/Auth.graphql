@@ -1,0 +1,65 @@
+mutation login($payload: LoginPayload!){
+    login(payload: $payload) {
+        access_token
+        refresh_token
+    }
+}
+
+
+mutation sendOtp($payload: SendOTPPayload!) {
+    sendOTP(payload: $payload) {
+        isSent
+    }
+}
+
+
+query fetchProfile {
+        profile {
+            id
+            customer_id
+            provider_id
+            first_name
+            last_name
+            email
+            stripe_customer_id
+            phone_number
+            image_url
+            is_email_verified
+            is_phone_verified
+            facebook_user_id
+            google_user_id
+            created_at
+            updated_at
+            customer{
+                id
+                stripe_customer_id
+                card_last_digits
+                card_brand_name
+                card_holder_name
+                created_at
+                updated_at
+            }
+            provider{
+                id
+                tax_id
+                bank_account_number
+                bank_account_holder_name
+                created_at
+                updated_at
+                bank{
+                    id
+                    name
+                    address
+                    is_active
+                    created_at
+                    updated_at
+                }
+            }
+        }
+    }
+
+mutation updateCustomerCard($customerCardToken: String!){
+    updateProfile(payload:{customer_card_token: $customerCardToken}) {
+        modified
+    }
+}

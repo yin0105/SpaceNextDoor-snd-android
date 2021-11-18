@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.spacenextdoor">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".application.App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SpaceNextDoor"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon">
+        <activity
+            android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"
+
+            android:theme="@style/FinestWebViewTheme.Light"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+
+        <activity android:name=".ui.activities.Bookings.CancelBooking"></activity>
+
+        <activity android:name=".ui.activities.Termination.RequestTermination" />
+
+        <activity android:name=".ui.activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.OnBoardingActivity"
+            android:theme="@style/Theme.Onboarding" />
+
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:theme="@style/Theme.main"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity android:name=".ui.activities.Payment.PaymentDetailsActivity" />
+
+        <activity android:name=".ui.activities.BottomNavigationActivity" />
+
+        <activity android:name=".ui.activities.MapsActivity" />
+
+        <activity android:name=".ui.activities.Inventory.InventoryServiceActivity" />
+        <activity android:name=".ui.activities.UnitDetailsActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBgOo-djfQEeEZaWUGB3BFRl7bm5YdW_h8" />
+
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false" />
+    </application>
+
+</manifest>

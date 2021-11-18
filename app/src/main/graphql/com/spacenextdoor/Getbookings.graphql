@@ -1,0 +1,161 @@
+query fetchBookings($limit: Int!){
+    bookings(pagination:{ limit:$limit, skip: 0 }
+        where: {status: {_in: [ACTIVE, CONFIRMED ]}}
+    ) {
+        edges {
+            id
+            short_id
+            status
+            total_amount
+            move_in_date
+            move_out_date
+            site_name
+            currency
+            currency_sign
+            termination{
+                notice_period_amount
+                id
+                termination_date
+            }
+            original_space {
+                id
+                space_type {
+                    name_en
+                }
+                size
+                size_unit
+            }
+            transactions{
+                id
+                currency
+                insurance {
+                    name_en
+                    total_amount
+                    price_per_day
+                    created_at
+                    updated_at
+                    covered_amount
+                    third_party_provider
+                }
+            }
+        }
+    }
+}
+
+query fetchInsurances($limit: Int!){
+    insurances(pagination:{ limit:$limit, skip: 0 }) {
+        edges {
+            id
+            name_en
+            name_th
+            covered_amount
+            third_party_provider
+        }
+    }
+}
+
+query fetchBookingDetails($bookingId: Int!){
+    booking (where: {id: {
+        _eq : $bookingId
+    }}) {
+        id
+        short_id
+        status
+        site_name
+        move_in_date
+        move_out_date
+        sub_total_amount
+        is_termination_requested
+        total_amount
+        currency
+        currency_sign
+        insurance_amount
+        transactions{
+            card_brand_name
+            card_last_digits
+            currency
+        }
+        termination{
+            move_out_date
+            termination_date
+            failed_renewals_amount
+            total_amount
+            status
+            currency
+            currency_sign
+        }
+        renewals{
+            sub_total_amount
+            insurance_amount
+            total_amount
+        }
+        termination{
+            id
+            move_out_date
+            status
+            payment_status
+            termination_date
+        }
+        site_address {
+            lat
+            lng
+            postal_code
+            flat
+            street
+            district{
+                name_en
+            }
+            country {
+                name_en
+            }
+            city{
+                name_en
+            }
+        }
+        insurance {
+            name_en
+            covered_amount
+            price_per_day
+        }
+        original_space {
+            id
+            images
+            space_type {
+                name_en
+            }
+            size
+            size_unit
+        }
+        site_features {
+            name_en
+            icon
+        }
+    }
+}
+
+
+mutation cancelBooking($payload : CancelBookingPayload!){
+    cancelBooking(payload: $payload){
+        id
+        refunded_amount
+        penalty_applied
+        penalty_percent
+    }
+}
+
+
+query cancellationReasons {
+    cancellation_reasons{
+        edges{
+            id
+            description_en
+            description_th
+            description_th
+            description_jp
+            description_kr
+        }
+    }
+}
+
+
+
